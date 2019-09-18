@@ -9,6 +9,7 @@ University Capstone Project for Metropolitan North Hospital and Health Services 
 Web Application using .NET Core Web API, Angular 7 and Microsoft SQL Server
 
 Demo: http://dentalbuddy.azurewebsites.net/
+
 *Deployed on Azure w/ free student account, may be unavailable after Spetember 2019 if deleted by University.*
 
 ### Mobile
