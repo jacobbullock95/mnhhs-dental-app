@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-sm-4">
+          <h1>
+              My Account
+            </h1>
+      </div>
+
+      <div class="col-sm-8">
+        <div *ngIf="editForm.dirty" class="alert alert-info">
+          <strong>Information:</strong>You have made changes to your profile. All unsaved changes will be lost!
+        </div>
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <div>
+                <strong>Name</strong>
+                <p>{{user.firstName}} {{user.lastName}}</p>
+            </div>
+  
+            
+            <div>
+                <strong>Medicare</strong>
+                <p>Number: {{user.medicareNumber}}</p>
+                <p>Line: {{user.medicareCode}}</p>
+                <p>Expiry: {{user.medicareExpiry}}</p>
+            </div>
+
+            <div>
+                <strong>Phone</strong>
+                <p>{{user.phone}}</p>
+            </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="tab-panel">
+          <tabset class="member-tabset">
+            <tab heading="Edit Profile">
+
+
+              <div>
+                  <form #editForm="ngForm" id="editForm" (ngSubmit)="updateUser()">
+                      <h4>First Name</h4>
+                      <input name="firstName" class="form-control mb-3" [(ngModel)]="user.firstName"/>
+                      <h4>Last Name</h4>
+                      <input name="lastName" class="form-control mb-3" [(ngModel)]="user.lastName"/>
+                      <h4>Medicare No.</h4>
+                      <input name="medicareNumber" class="form-control mb-3" [(ngModel)]="user.medicareNumber"/>
+                      <h4>Medicare Line No.</h4>
+                      <input name="medicareCode" class="form-control mb-3" [(ngModel)]="user.medicareCode"/>
+                      <h4>Medicare Expiry</h4>
+                      <input name="medicareExpiry" class="form-control mb-3" [(ngModel)]="user.medicareExpiry"/>
+                      <h4>Phone</h4>
+                      <input name="phone" class="form-control mb-3" [(ngModel)]="user.phone"/>
+    
+                  </form>
+                  <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success w-80">Save Changes</button>
+              </div>
+              
+              
+            </tab>
+            <tab heading="Forms">
+
+
+                <strong>Forms Coming Soon!</strong>
+                
+                
+              </tab>
+          </tabset>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  

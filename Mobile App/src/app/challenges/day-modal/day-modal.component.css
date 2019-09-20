@@ -1,0 +1,12 @@
+FlexboxLayout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20;
+    background: white;
+}
+
+.btn {
+    width: 90%;
+    margin: 5;
+}

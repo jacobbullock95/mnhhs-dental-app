@@ -1,0 +1,404 @@
+
+<FlexboxLayout height="100%"flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+    title="Consent Form"
+    [showBackButton]="false"
+    ></ns-action-bar>
+    <StackLayout height="100%" width="90%" *ngIf="showConfirmation">
+        <StackLayout class="input-field">
+        <Label class="header strong center mb20" text="Consent Form Submitted Successfully"></Label>
+        
+        <Button class="btn" id="button" text="Fill Out New Form" (tap)="navigateToPage('forms')"></Button>
+        <Button class="btn" id="button" text="Request Callback" (tap)="navigateToPage('contact')"></Button>
+        <Button class="btn" id="button" text="Go Home" (tap)="navigateToPage('home')"></Button>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout height="100%" width="100%" *ngIf="!showConfirmation">
+
+        <ScrollView sdkExampleTitle sdkToggleNavButton #formScroll>
+            <StackLayout class="form" height="5500">
+                <StackLayout class="input-field">
+                    <Label class="header strong" text="Details of your child"></Label>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Title"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'title')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Last Name"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'lastName')" returnKeytype="next" (returnPress)="scrollToPosition(160)" class="input"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="First Name(s)"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'firstName')" returnKeytype="next" (returnPress)="scrollToPosition(220)" class="input"></TextField>
+                </StackLayout>
+
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Alternate or previous name/s known by (if applicable)" textWrap="true"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'alternativeName')" returnKeytype="next" (returnPress)="scrollToPosition(300)" class="input"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Date of Birth"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'dateOfBirth')" returnKeytype="next" (returnPress)="scrollToPosition(500)" class="input" keyboardType="datetime"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Gender"></Label>
+                    <StackLayout orientation="horizontal">
+                        <CheckBox #genderMale class="mr10" text="Male" checked="false" (tap)="genderToggleCheck('male')"></CheckBox>
+                        <CheckBox #genderFemale class="mr10" text="Female" checked="false" (tap)="genderToggleCheck('female')"></CheckBox>
+                        <CheckBox #genderOther class="mr10" text="Other" checked="false" (tap)="genderToggleCheck('other')"></CheckBox>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Home Address"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'homeAddress')" returnKeytype="next" (returnPress)="scrollToPosition(560)" class="input"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Postal Address"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'postalAddress')" returnKeytype="next" (returnPress)="scrollToPosition(620)" class="input"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Phone (home)"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'phoneHome')" returnKeytype="next" (returnPress)="scrollToPosition(690)" class="input" keyboardType="phone"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Phone (work)"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'phoneWork')" returnKeytype="next" (returnPress)="scrollToPosition(750)" class="input" keyboardType="phone"></TextField>
+                </StackLayout>
+
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Phone (mobile)"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'phoneMobile')" returnKeytype="next" (returnPress)="scrollToPosition(820)" class="input" keyboardType="phone"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Contact Person in case of emergency"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'emergencyContactPerson')" returnKeytype="next" (returnPress)="scrollToPosition(890)" class="input"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Emergency contact number"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'emergencyContactPhone')" returnKeytype="next" (returnPress)="scrollToPosition(970)" class="input" keyboardType="phone"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Medicare Number"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'medicareNumber')" returnKeytype="next" (returnPress)="scrollToPosition(1050)" class="input" keyboardType="number"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Medicare Line Number"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'medicareLineNumber')" returnKeytype="next" (returnPress)="scrollToPosition(1110)" class="input" keyboardType="number"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Medicare Expiry"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'medicareExpiry')" returnKeytype="next" (returnPress)="scrollToPosition(1200)" class="input" keyboardType="datetime"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Healthcare Card Number"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'healthcareCardNumber')" returnKeytype="next" (returnPress)="scrollToPosition(1280)" class="input" keyboardType="number"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Healthcare Expiry Date"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'healthcareExpiryDate')" returnKeytype="next" (returnPress)="scrollToPosition(1360)" class="input" keyboardType="datetime"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Is your child eligible for dental treatment under the Child Dental Benefits?" textWrap="true"></Label>
+                    <StackLayout orientation="horizontal">
+                        <CheckBox #treatmentEligibilityYes text="Yes" checked="false" (tap)="treatmentEligibilityToggle('yes')"></CheckBox>
+                        <CheckBox #treatmentEligibilityNo text="No" checked="false" (tap)="treatmentEligibilityToggle('no')"></CheckBox>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="School Attended"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'schoolAttended')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Grade"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'schoolGrade')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input" keyboardType="number"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="strong inputHeading" text="If your child is eligible for the Child Dental Benefits Schedule (or if you are unsure) please complete the Bulk Billing Patient Consent form later on." textWrap="true"></Label>
+                    <Label class="strong inputHeading" text="I consent to my child receiving treatment" textWrap="true"></Label>
+                    <CheckBox #consentTreatmentYes text="Yes, I consent" checked="false" (tap)="toggleConsentTreatment()"></CheckBox>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Is your child on Aboriginal or Torres Strait Islander or South Sea Islander origin" textWrap="true"></Label>
+                    <CheckBox #originNo text="No" checked="false" (tap)="originCheckboxToggle('no')"></CheckBox>
+                    <CheckBox #originAboriginal text="Aboriginal" checked="false" (tap)="originCheckboxToggle('aboriginal')"></CheckBox>
+                    <CheckBox #originTorres text="Torres Strait Islander" checked="false" (tap)="originCheckboxToggle('torresStraitIslander')"></CheckBox>
+                    <CheckBox #originSouthSea text="South Sea Islander" checked="false" (tap)="originCheckboxToggle('southSeaIslander')"></CheckBox>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Which country was your child born" textWrap="true"></Label>
+                    <CheckBox #birthAustralia text="Australia" checked="false" (tap)="birthCheckboxToggle('australia')"></CheckBox>
+                    <CheckBox #birthOther text="Other" checked="false" (tap)="birthCheckboxToggle('other')"></CheckBox>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onBirthLocationChange($event)" returnKeytype="next" (returnPress)="scrollToPosition(100)" class *ngIf="showBirthCountryField"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Language spoken at home" textWrap="true"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'languageSpokenAtHome')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Do you require an interpreter" textWrap="true"></Label>
+                    <StackLayout orientation="horizontal">
+                        <CheckBox #interpreterYes text="Yes" checked="false" (tap)="interpreterCheckboxToggle('yes')"></CheckBox>
+                        <CheckBox #interpreterNo text="No" checked="false" (tap)="interpreterCheckboxToggle('no')"></CheckBox>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="hr-light"></StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Who is your child's usual medical practitioner (name, address & phone)" textWrap="true"></Label>
+                    <TextView style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="300px" hint="Enter Note" (textChange)="onTextChange($event, 'usualMedicalPracitionerDetails')" returnKeyType="send" (returnPress)="scrollToPosition(100)" class="input input-border"></TextView>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Is this child in the custody of the Department of Child Safety" textWrap="true"></Label>
+                    <StackLayout orientation="horizontal">
+                        <CheckBox #custodyYes text="Yes" checked="false" (tap)="custodyCheckboxToggle('yes')"></CheckBox>
+                        <CheckBox #custodyNo text="No" checked="false" (tap)="custodyCheckboxToggle('no')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout>
+                        <TextView style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="300px" hint="Department of Child Safety Branch Details (please include phone number)"  (textChange)="onTextChange($event, 'custodyDepartmentChildSafetyDetails')" returnKeyType="send" (returnPress)="scrollToPosition(100)"class="input input-border" *ngIf="showCustodyField"></TextView>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="strong inputHeading" text="I consent to health professionals who have treated my child exchanging information about my child as may be required to assist in providing oral health care to my child. I also consent to information that has been collected by Queensland health, when providing oral health care to my child, be used by Queensland health to check and assess the oral health services my child has received and how their services have been used to, so long as my child's name is not used in any reports or published statistics." textWrap="true"></Label>
+                    <CheckBox #CB1 text="Yes, I consent" checked="false"></CheckBox>
+
+                        <Label class="strong inputHeading" text="Your Name"></Label>
+                        <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'lastName')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                </StackLayout>
+
+                <StackLayout class="hr-light"></StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="header strong" text="Dental History"></Label>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Has your child been treated previously at a school dental clinic in Queensland?" textWrap="true"></Label>
+                    <StackLayout>
+                        <StackLayout orientation="horizontal">
+                            <CheckBox #previouslyTreatedSchoolYes text="Yes" checked="false" (tap)="previouslyTreatedSchoolCheckboxToggle('yes')"></CheckBox>
+                            <CheckBox #previouslyTreatedSchoolNo text="No" checked="false" (tap)="previouslyTreatedSchoolCheckboxToggle('no')"></CheckBox>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <StackLayout orientation="horizontal" *ngIf="previouslyTreatedSchool">
+                                <Label class="strong inputHeading" text="School"></Label>
+                                <TextField hint="Enter text" autocorrect="false" (textChange)="previouslyTreatedSchoolDetails($event, 'previouslyTreatedSchoolClinicDetailsSchool')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                            </StackLayout>
+                            <StackLayout orientation="horizontal" *ngIf="previouslyTreatedSchool">
+                                <Label class="strong inputHeading" text="Year"></Label>
+                                <TextField hint="Enter text" autocorrect="false" (textChange)="previouslyTreatedSchoolDetails($event, 'previouslyTreatedSchoolClinicDetailsYear')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Is your child receiving treatment from another dentist?" textWrap="true"></Label>
+                    <StackLayout orientation="horizontal">
+                        <CheckBox #otherDentistTreatmentYes text="Yes" checked="false" (tap)="otherDentistTreatmentCheckboxToggle('yes')"></CheckBox>
+                        <CheckBox #otherDentistTreatmentNo text="No" checked="false" (tap)="otherDentistTreatmentCheckboxToggle('no')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout>
+                        <TextView *ngIf="otherDentistTreatment" (textChange)="otherDentistTreatmentDetailsChangeDetails($event, 'currentlyReceivingDentalTreatmentDetails')" style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="300px" hint="Treatment Details"  returnKeyType="send" class="input input-border"></TextView>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                        <Label class="strong inputHeading" text="Is your child attending an orthodontist/dental specialist" textWrap="true"></Label>
+                        <StackLayout orientation="horizontal">
+                            <CheckBox #specialistTreatmentYes text="Yes" checked="false" (tap)="specialistTreatmentCheckboxToggle('yes')"></CheckBox>
+                            <CheckBox #specialistTreatmentNo text="No" checked="false" (tap)="specialistTreatmentCheckboxToggle('no')"></CheckBox>
+                        </StackLayout>
+                        <StackLayout>
+                            <TextView *ngIf="specialistTreatment" (textChange)="specialistTreatmentDetailsChangeDetails($event, 'currentlyReceivingSpecialistTreatmentDetails')" style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="300px" hint="Treatment Details"  returnKeyType="send" class="input input-border"></TextView>
+                        </StackLayout>
+                    </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Please list any problems that your child has with his/her teeth or mouth" textWrap="true"></Label>
+                    <StackLayout>
+                        <TextView (textChange)="onTextChange($event, 'problemsWithChildsTeethDetails') " style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="300px" hint="Details"  returnKeyType="send" class="input input-border"></TextView>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="hr-light"></StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="header strong" text="Medical History"></Label>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <CheckBox #confidentialInformationCheckbox (tap)="toggleConfidentialCheckbox()" text="I have confidential medical information about my child that I do not wish to write down. I would prefer to speak to a dentist about this." checked="false"></CheckBox>
+                </StackLayout>
+                
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="Does he/she have, or has he/she every had, any of the following medical conditions?" textWrap="true"></Label>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Rheumatic fever" textWrap="true"></Label>
+                        <CheckBox #rheumaticFever text="Yes" checked="false" (tap)="toggleMedicalCondition('Rheumatic Fever')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Heart complaint" textWrap="true"></Label>
+                        <CheckBox #heartComplaint text="Yes" checked="false" (tap)="toggleMedicalCondition('Heart Complaint')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Heart valve disorder" textWrap="true"></Label>
+                        <CheckBox #heartValveDisorder text="Yes" checked="false" (tap)="toggleMedicalCondition('Heart Valve Disorder')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Thyroid disease" textWrap="true"></Label>
+                        <CheckBox #thyroidDisease text="Yes" checked="false" (tap)="toggleMedicalCondition('Thyroid Disease')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Cardiac pacemaker" textWrap="true"></Label>
+                        <CheckBox #cardiacPacemaker text="Yes" checked="false" (tap)="toggleMedicalCondition('Cardiac Pacemaker')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Prosthetic or other implant" textWrap="true"></Label>
+                        <CheckBox #prostheticImplant text="Yes" checked="false" (tap)="toggleMedicalCondition('Prosthetic or Other Implant')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Anaemia, leukaemia or other blood diseases" textWrap="true"></Label>
+                        <CheckBox #anaemiaLeukaemia text="Yes" checked="false" (tap)="toggleMedicalCondition('Anaemia, Leukaemia or Other Blood Diseases')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Excessive bleeding" textWrap="true"></Label>
+                        <CheckBox #excessiveBleeding text="Yes" checked="false" (tap)="toggleMedicalCondition('Excessive Bleeding')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="High or low blood pressure" textWrap="true"></Label>
+                        <CheckBox #bloodPressure text="Yes" checked="false" (tap)="toggleMedicalCondition('High or Low Blood Pressure')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Stroke" textWrap="true"></Label>
+                        <CheckBox #stroke text="Yes" checked="false" (tap)="toggleMedicalCondition('Stroke')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Contact with HIV/AIDS virus" textWrap="true"></Label>
+                        <CheckBox #HivAids text="Yes" checked="false" (tap)="toggleMedicalCondition('Contact with HIV/AIDS Virus')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Growth disorder" textWrap="true"></Label>
+                        <CheckBox #growthDisorder text="Yes" checked="false" (tap)="toggleMedicalCondition('Growth Disorder')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Epilepsy" textWrap="true"></Label>
+                        <CheckBox #epilepsy text="Yes" checked="false" (tap)="toggleMedicalCondition('Epilepsy')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Radiation therapy" textWrap="true"></Label>
+                        <CheckBox #radiationTherapy text="Yes" checked="false" (tap)="toggleMedicalCondition('Radiation Therapy')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Steroid therapy" textWrap="true"></Label>
+                        <CheckBox #steroidTherapy text="Yes" checked="false" (tap)="toggleMedicalCondition('Steroid Therapy')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Asthma" textWrap="true"></Label>
+                        <CheckBox #asthma text="Yes" checked="false" (tap)="toggleMedicalCondition('Asthma')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Bronchitis or other lung diseases" textWrap="true"></Label>
+                        <CheckBox #bronchitisLungDisease text="Yes" checked="false" (tap)="toggleMedicalCondition('Bronchitis or Other Lung Diseases')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Tuberculosis" textWrap="true"></Label>
+                        <CheckBox #tuberculosis text="Yes" checked="false" (tap)="toggleMedicalCondition('Tuberculosis')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Stomach or digestive condition" textWrap="true"></Label>
+                        <CheckBox #digestiveCondition text="Yes" checked="false" (tap)="toggleMedicalCondition('Stomach or Digestive Condition')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Nervous condition eg. ADD" textWrap="true"></Label>
+                        <CheckBox #nervousCondition text="Yes" checked="false" (tap)="toggleMedicalCondition('Nervous Condition eg. ADD')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Diabetes" textWrap="true"></Label>
+                        <CheckBox #diabetes text="Yes" checked="false" (tap)="toggleMedicalCondition('Diabetes')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="checkboxListContainer">
+                        <Label class="inputHeading checkboxList" text="Hepatitis or other liver disease" textWrap="true"></Label>
+                        <CheckBox #hepatitis text="Yes" checked="false" (tap)="toggleMedicalCondition('Hepatitis or Other Liver Disease')"></CheckBox>
+                    </StackLayout>
+                    <StackLayout>
+                        <TextView  style="margin-top: 15px" borderColor="#DEDEDE" borderWidth="1" height="300px" hint="Other condition(s) not listed above" (textChange)="onTextChange($event, 'otherMedicalConditions')" returnKeyType="send" class="input input-border"></TextView>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="hr-light"></StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="header strong" text="CHILD DENTAL BENEFITS SCHEDULE BULK BILLING PATIENT CONSENT FORM" textWrap="true"></Label>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="inputHeading strong" text="I, the patient / legal guardian certify that I have been informed:" textWrap="true"></Label>
+                    <Label class="inputHeading strong" text="• Of the treatment that has been or will be provided from this date under the child dental benefit schedule;" textWrap="true"></Label>
+                    <Label class="inputHeading strong" text="• Of the likely cost of this treatment; and" textWrap="true"></Label>
+                    <Label class="inputHeading strong" text="• That I will be bulk billed for services under the child dental benefits schedule and I will not pay out of pocket costs for these services subject to sufficient funds being available under the benefits cap. Once my benefit cap has been reached I will not need to pay for any out of pocket costs provided I am eligible for services in a Queensland public dental health clinic." textWrap="true"></Label>
+                </StackLayout>
+
+                <StackLayout class="input-field">
+                    <Label class="inputHeading strong" text="I understand that I / the patient will only have access to dental benefits of up to that benefit cap." textWrap="true"></Label>
+                    <Label class="inputHeading strong" text="I understand that benefits for some services may have restrictions and that child dental benefits schedule covers a limited range of services. I understand I will need to personally meet the costs of any service is not covered by the child dental benefits schedule or Queensland public dental services." textWrap="true"></Label>
+                    <Label class="inputHeading strong" text="I understand that the costs of services will reduce the available benefit cap and that I will need to personally need any costs of any additional services not covered by the Queensland public dental services once benefits are exhausted." textWrap="true"></Label>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="horizontal">
+                    <Label class="strong inputHeading mr20" text="Medicare Number"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'medicareNumberConfirm')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"  keyboardType="number"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="horizontal">
+                    <Label class="strong inputHeading mr20" text="Medicare Line Number"></Label>
+                    <TextField hint="Enter text" autocorrect="false" (textChange)="onTextChange($event, 'medicareLineNumberConfirm')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input" keyboardType="number"></TextField>
+                </StackLayout>
+                <StackLayout class="input-field" orientation="horizontal">
+                    <Label class="strong inputHeading mr20" text="Medicare Exipry"></Label>
+                    <TextField hint="MM" width="50" autocorrect="false" (textChange)="onTextChange($event, 'medicareExpiryMth')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input" keyboardType="number"></TextField>
+                    <Label class="inputHeading" width="15" text="/"></Label>
+                    <TextField hint="YY" width="50" autocorrect="false" (textChange)="onTextChange($event, 'medicareExpiryYr')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input" keyboardType="number"></TextField>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <StackLayout orientation="horizontal">
+                        <Label class="strong inputHeading mr20" text="Child's First Name(s)"></Label>
+                        <TextField hint="" autocorrect="false" (textChange)="onTextChange($event, 'childFirstName')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal">
+                        <Label class="strong inputHeading mr20" text="Child's Last Name"></Label>
+                        <TextField hint="" autocorrect="false" (textChange)="onTextChange($event, 'childLastName')" returnKeytype="next" (returnPress)="scrollToPosition(100)" class="input"></TextField>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout class="input-field" orientation="vertical">
+                    <Label class="strong inputHeading" text="I consent to the above information and that all the details are accurate." textWrap="true"></Label>
+                    <CheckBox #bulkBillConsent text="Yes" checked="false" (tap)="bulkBillCheckboxToggle()"></CheckBox>
+
+                    <Label class="strong inputHeading" text="Consenting Person Name" textWrap="true"></Label>
+                    <TextField hint="" autocorrect="false" (textChange)="onTextChange($event, 'bulkBillSignatory')" returnPress="doneTap" class="input"></TextField>
+                </StackLayout>
+
+
+                <Button class="btn btn-primary btn-active" id="button" text="Submit" (tap)="submitForm()"></Button>
+            </StackLayout>              
+        </ScrollView>
+    </StackLayout>
+</FlexboxLayout>
+

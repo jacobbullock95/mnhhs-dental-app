@@ -1,0 +1,43 @@
+.sidebarItem{
+    height: 40;
+    font-size: 18;
+    color: #43464c;
+}
+
+.sidebarItem .icon{
+    margin-top: 3;
+    margin-right: 10;
+    width: 20;
+}
+
+.drawer-container{
+    padding-top: 30;
+}
+
+.sidebarTop{
+    margin-bottom: 30;
+}
+
+.sidebarLogo{
+    background-image: url("~/app/assets/logos/primary-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 47;
+    margin-bottom: 30;
+    margin-left: 50;
+}
+
+.sidebarItem{
+    padding-left: 30;
+    margin-bottom: 3;
+    margin-top: 3;
+}
+
+.drawer-container{
+    background: #ffffff;
+}
+
+.boldText{
+    font-weight: 500;
+}

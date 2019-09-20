@@ -1,0 +1,42 @@
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.deps.json
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.runtimeconfig.json
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.runtimeconfig.dev.json
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.dll
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.pdb
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.csprojAssemblyReference.cache
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.csproj.CoreCompileInputs.cache
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorAssemblyInfo.cache
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorAssemblyInfo.cs
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.AssemblyInfoInputs.cache
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.AssemblyInfo.cs
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorTargetAssemblyInfo.cache
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.dll
+/Users/jacobbullock/Desktop/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.pdb
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.deps.json
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.runtimeconfig.json
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.runtimeconfig.dev.json
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.dll
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.pdb
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.csprojAssemblyReference.cache
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.csproj.CoreCompileInputs.cache
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorAssemblyInfo.cache
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorAssemblyInfo.cs
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.AssemblyInfoInputs.cache
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.AssemblyInfo.cs
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorTargetAssemblyInfo.cache
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.dll
+/Users/jacobbullock/Desktop/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.pdb
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.deps.json
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.runtimeconfig.json
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.runtimeconfig.dev.json
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.dll
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/bin/Debug/netcoreapp2.1/DentalApp.API.pdb
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.csprojAssemblyReference.cache
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.csproj.CoreCompileInputs.cache
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorAssemblyInfo.cache
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorAssemblyInfo.cs
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.AssemblyInfoInputs.cache
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.AssemblyInfo.cs
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.RazorTargetAssemblyInfo.cache
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.dll
+/Users/nickpettigrew/Software Dev/MetNorth Dental App/metroNorthDentalApp/DentalApp/DentalApp.API/obj/Debug/netcoreapp2.1/DentalApp.API.pdb

@@ -1,0 +1,15 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+        title="More Information"
+        [showBackButton]="false"
+    ></ns-action-bar>
+
+    
+    <StackLayout height="100%" width="90%" class="centerAlign">
+        <StackLayout class="featureImage" horizontalAlignment="center" verticalAlignment="center"></StackLayout>
+        
+        <Label class="strong heading" text="Hey, there is still always more information to be found on Metro North's Website" textWrap="true"></Label>
+        <Button class="btn mt20" id="button" text="Click here to find out more information" (tap)="navigateToMetroNorth()"></Button>
+
+    </StackLayout>
+</FlexboxLayout>

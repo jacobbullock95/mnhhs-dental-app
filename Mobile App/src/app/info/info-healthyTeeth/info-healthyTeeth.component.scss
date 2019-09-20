@@ -1,0 +1,78 @@
+@import '../../../theme/colors';
+
+.FlexboxLayout{
+
+}
+
+.strong{
+    font-weight: 700;
+}
+
+.heading{
+    font-size: 17;
+    color: #0079be;
+}
+
+.tipBlock{
+    margin-top: 25;
+
+    .heading{
+        color: #ffffff;
+    }
+
+    .subheading{
+        color: #ffffff;
+    }
+
+    .tipLabelOdd{
+        background-color: #0079be;
+        border-radius: 100%;
+        z-index: 2;
+
+        Label{
+            color: #ffffff;
+            font-size: 20;
+            font-weight: 700;
+        }
+    }
+
+    .tipLabelEven{
+        background-color: #0079be;
+        border-radius: 100%;
+        z-index: 2;
+
+        Label{
+            color: #ffffff;
+            font-size: 20;
+            font-weight: 700;
+        }
+    }
+
+    .tipBlockOdd{
+        background-color: #00598C;
+        margin-left: -25;
+        z-index: 1;
+        border-radius: 10;
+        padding: 10 30;
+    }
+
+    .tipBlockEven{
+        background-color: #00598C;
+        margin-right: -25;
+        z-index: 1;
+        border-radius: 10;
+        padding: 10 30;
+    }
+}
+
+.nextButton{
+    background-color: red;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15;
+    text-transform: none;
+    width: 30%;
+    border-radius: 20;
+    height: 50;
+    margin-bottom: 10;
+}

@@ -1,0 +1,41 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+        title="Home"
+        [showBackButton]="true"
+    ></ns-action-bar>
+    <FlexboxLayout justifyContent="center" alignItems="center" *ngIf="isLoading">
+        <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+      </FlexboxLayout>
+      <StackLayout class="greeting" *ngIf="!isLoading">
+            <Label *ngIf="hasName" class="detailsText" text="Welcome, {{currentAccount.firstName}}"></Label>
+            <Label *ngIf="!hasName" text="Click here to add your details" class="detailsText" [nsRouterLink]="['/account']"></Label>
+            <Label *ngIf="hasName" text="Select a link below to continue" class="subheading"></Label>
+        </StackLayout>
+            <CardView class="homeWidget" elevation="7" radius="30" ios:shadowRadius="3" width="90%" height="200" (tap)="navigateToPage('info')">
+                <StackLayout class="card-layout">
+                    <StackLayout>
+                    <Image src="~/app/assets/quickSelectIcons/learn.png" stretch="aspectFit" class="shortcutImages" height="75"></Image>
+                    </StackLayout>
+                    <Label class="headerText" text="Learn" class="title"></Label>
+                </StackLayout>
+            </CardView>
+            <CardView class="homeWidget" elevation="7" radius="30" ios:shadowRadius="3" width="90%" height="200" (tap)="navigateToPage('challenges')">
+                <StackLayout class="card-layout">
+                    <StackLayout>
+                    <Image src="~/app/assets/quickSelectIcons/calendar.png" stretch="aspectFit" class="shortcutImages" height="75"></Image>
+                    </StackLayout>
+                    <Label class="headerText" text="Challenges" class="title"></Label>
+                </StackLayout>
+            </CardView>
+            <CardView class="homeWidget" elevation="7" radius="30" ios:shadowRadius="3" width="90%" height="200" (tap)="navigateToPage('clinics')">
+                <StackLayout class="card-layout">
+                    <StackLayout>
+                    <Image src="~/app/assets/quickSelectIcons/find.png" stretch="aspectFit" class="shortcutImages" height="75"></Image>
+                    </StackLayout>
+                    <Label class="headerText" text="Find a Clinic" class="title"></Label>
+                </StackLayout>
+            </CardView>
+        
+
+       
+</FlexboxLayout>

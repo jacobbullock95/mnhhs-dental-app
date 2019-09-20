@@ -1,0 +1,8 @@
+/* Add mobile styles for the component here.  */
+@import '../../../theme/colors';
+
+TabView {
+    android-selected-tab-highlight-color: $primary;
+    selected-tab-text-color: $primary;
+    text-transform: none;
+}

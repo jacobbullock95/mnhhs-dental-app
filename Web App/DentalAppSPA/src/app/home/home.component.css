@@ -1,0 +1,14 @@
+#homeCont{
+    margin-top: 20vh;
+}
+
+.buttonBig {
+    font-size: 200%;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.pills {
+    width: 50%;
+}

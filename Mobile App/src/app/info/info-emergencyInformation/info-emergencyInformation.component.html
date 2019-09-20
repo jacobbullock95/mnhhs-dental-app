@@ -1,0 +1,99 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+        title="Emergency Information"
+        [showBackButton]="false"
+    ></ns-action-bar>
+
+    
+    <StackLayout height="100%" width="90%">
+        <Label class="heading strong" text="What to do when a Dental Emergency Occurs" textWrap="true"></Label>
+        <StackLayout height="85%">
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data1">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Tooth Ache" textWrap="true"></Label>
+                <Label class="ptext" text="• Rinse mouth" textWrap="true"></Label>
+                <Label class="ptext" text="• Place an icepack on cheek" textWrap="true"></Label>
+                <Label class="ptext" text="• Take paracetamol" textWrap="true"></Label>
+                <Label class="ptext" text="• Seek dental treatment ASAP" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data1">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Knocked out Tooth" textWrap="true"></Label>
+                <Label class="ptext" text="• Remain calm and find tooth" textWrap="true"></Label>
+                <Label class="ptext" text="• Handle top of the tooth only" textWrap="true"></Label>
+                <Label class="ptext" text="• Keep the tooth clean" textWrap="true"></Label>
+                <Label class="ptext" text="• Do not let the tooth dry out" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data1">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Chipped Tooth" textWrap="true"></Label>
+                <Label class="ptext" text="• Do not panic" textWrap="true"></Label>
+                <Label class="ptext" text="• Look for an exposed nerve" textWrap="true"></Label>
+                <Label class="ptext" text="• If it's a large crack, seek dental treatment ASAP" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Split Lip" textWrap="true"></Label>
+                <Label class="ptext" text="• Rinse Mouth" textWrap="true"></Label>
+                <Label class="ptext" text="• Place an icepack on cheek" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data2">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Knocked out Tooth" textWrap="true"></Label>
+                <Label class="ptext" text="• Remain calm and find tooth" textWrap="true"></Label>
+                <Label class="ptext" text="• Handle the top of the tooth only" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data2">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Trauma & Bleeding" textWrap="true"></Label>
+                <Label class="ptext" text="• Sit down and maintain pressure with a bandage for 10 minutes" textWrap="true"></Label>
+                <Label class="ptext" text="• If bleeding cannot be controlled seek medical attention" textWrap="true"></Label>
+                <Label class="ptext" text="• Use warm, salty mouth rinses to assist with healing" textWrap="true"></Label>
+
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout height="25%" class="tip" orientation="horizontal" *ngIf="data2">
+            <StackLayout class="imageContainer" horizontalAlignment="center" verticalAlignment="center">
+                <StackLayout class="image" style="background-image: url('~/app/assets/dentalEmergencyIcons/toothAche.png')"></StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Label class="subheading ptext strong" text="Jaw Pain" textWrap="true"></Label>
+                    <Label class="ptext" text="• To reduce pain in the short term apply a cold compress or take anti-inflammatory medication" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+        </StackLayout>
+
+        <StackLayout orientation="horizontal" horizontalAlignment="center">
+            <Button class="btn" id="button" text="{{navigateButtonText}}" (tap)="changeDataShown()"></Button>
+        </StackLayout>
+    </StackLayout>
+</FlexboxLayout>

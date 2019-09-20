@@ -1,0 +1,57 @@
+{
+    "nativescript": {
+        "id": "org.nativescript.metnorthdental",
+        "tns-android": {
+            "version": "5.1.0"
+        },
+        "tns-ios": {
+            "version": "5.1.0"
+        }
+    },
+    "description": "NativeScript Application",
+    "license": "SEE LICENSE IN <your-license-filename>",
+    "repository": "<fill-your-repository-here>",
+    "dependencies": {
+        "@angular/animations": "~7.1.0",
+        "@angular/common": "~7.1.0",
+        "@angular/compiler": "~7.1.0",
+        "@angular/core": "~7.1.0",
+        "@angular/forms": "~7.1.0",
+        "@angular/http": "~7.1.0",
+        "@angular/platform-browser": "~7.1.0",
+        "@angular/platform-browser-dynamic": "~7.1.0",
+        "@angular/router": "~7.1.0",
+        "firebase": "^6.0.4",
+        "nativescript-angular": "~7.1.0",
+        "nativescript-auto-fit-text": "^1.0.0",
+        "nativescript-cardview": "^3.1.1",
+        "nativescript-carousel": "^4.1.0",
+        "nativescript-checkbox": "^3.0.3",
+        "nativescript-directions": "^1.3.0",
+        "nativescript-email": "^1.5.3",
+        "nativescript-geocoding": "^1.1.0",
+        "nativescript-geolocation": "^5.0.0",
+        "nativescript-loki": "^1.0.1",
+        "nativescript-mapbox": "^4.4.1",
+        "nativescript-orientation": "^2.2.1",
+        "nativescript-phone": "^1.4.0",
+        "nativescript-sqlite": "^2.3.3",
+        "nativescript-star-ratings": "^1.0.0",
+        "nativescript-theme-core": "~1.0.4",
+        "nativescript-toast": "^2.0.0",
+        "nativescript-ui-sidedrawer": "^5.1.0",
+        "reflect-metadata": "~0.1.8",
+        "rxjs": "~6.3.0",
+        "tns-core-modules": "~5.1.0",
+        "zone.js": "^0.8.26"
+    },
+    "devDependencies": {
+        "@angular/compiler-cli": "^7.2.13",
+        "@nativescript/schematics": "~0.5.0",
+        "@ngtools/webpack": "~7.1.0",
+        "nativescript-dev-sass": "^1.7.0",
+        "nativescript-dev-typescript": "~0.7.0",
+        "nativescript-dev-webpack": "^0.21.2"
+    },
+    "readme": "NativeScript Application"
+}

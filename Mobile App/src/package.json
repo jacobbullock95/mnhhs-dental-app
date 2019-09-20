@@ -1,0 +1,9 @@
+{
+    "main": "main.js",
+    "android": {
+        "v8Flags": "--expose_gc"
+    },
+    "dependencies": {
+        "nativescript-phone": "^1.4.0"
+    }
+}

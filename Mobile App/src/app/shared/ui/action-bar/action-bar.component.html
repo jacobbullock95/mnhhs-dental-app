@@ -1,0 +1,42 @@
+<!--<ActionBar [title]="title" (loaded)="onLoadedActionBar()">
+  <NavigationButton
+    text="Back"
+    android.systemIcon="ic_menu_back"
+    *ngIf="canGoBack"
+    (tap)="onGoBack()"
+  ></NavigationButton>
+  <NavigationButton
+    *ngIf="android && hasMenu"
+    icon="res://menu_black"
+    (tap)="onToggleMenu()"
+  ></NavigationButton>
+  <ActionItem
+    *ngIf="!android && hasMenu"
+    ios.position="left"
+    (tap)="onToggleMenu()"
+  >
+    <Label text="&#xf0c9;" class="fa m-5" fontSize="24"></Label>
+  </ActionItem>
+  <ng-content></ng-content>
+</ActionBar>-->
+
+<AbsoluteLayout class="headerShapeContainer">
+    
+    <ContentView class="headerShape"></ContentView>
+ 
+    <StackLayout class="header">
+            <StackLayout  class="btn-img"  orientation="horizontal" padding="0" >
+                <Image *ngIf="hasMenu" src="res://menu"  width="25" height="25" marginRight="20" (tap)="onToggleMenu()"></Image>
+                <Label text="{{ title }}" verticalAlignment="center" style="font-size: 20;"></Label>
+            </StackLayout>
+        <!--    <Label class="welcomeText">
+        <FormattedString><Span text="Hello, Matthew"></Span></FormattedString>
+        </Label>
+        <Label class="appointmentText">
+            <FormattedString><Span text="Today's Date is:"></Span></FormattedString>
+        </Label>
+        <Label class="supportText"  textWrap="true">
+            <FormattedString><Span text="Message 2"></Span></FormattedString>
+        </Label>-->
+    </StackLayout>
+</AbsoluteLayout>

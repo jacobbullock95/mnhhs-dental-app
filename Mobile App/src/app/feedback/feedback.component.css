@@ -1,0 +1,17 @@
+/* Add mobile styles for the component here.  */
+.btn{
+    border-radius: 10;
+    height: 50;
+    text-transform: none;
+    font-size: 17;
+    width: 80%;
+    background-color: #0079be;
+    color: white;
+}
+
+.rating{
+    background-color: #0079be;
+    border-radius: 10;
+    height: 50;
+    transform: scale(0.5);
+}

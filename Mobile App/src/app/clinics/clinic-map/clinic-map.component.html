@@ -1,0 +1,32 @@
+
+  <FlexboxLayout class="onTop" height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+    title="All Clinic Locations"
+    [showBackButton]="false"
+    ></ns-action-bar>
+
+  </FlexboxLayout>
+
+<DockLayout stretchLastChild="false" class="onTop">
+    <Button dock="bottom" text="New Search" class="resetButton" (tap)="resetSearch()" *ngIf="showResetButton" clearHistory="true"></Button>
+</DockLayout>
+
+<AbsoluteLayout height="100%" width="100%" backgroundColor="red">
+    <ContentView width="100%" height="100%" class="mapContainer">
+        <Mapbox
+            #map
+            accessToken="pk.eyJ1IjoibW1hZ2luMSIsImEiOiJjanUxb2QzMjUwM3FnM3lydmM5MWdlbTQ5In0.JtTt3RGfngLVeNAcYKoRmA"
+            mapStyle="day"
+            latitude="-28.890108"
+            longitude="136.324818"
+            hideCompass="true"
+            zoomLevel="8"
+            showUserLocation="true"
+            disableZoom="false"
+            disableRotation="false"
+            disableScroll ="false"
+            disableTilt="false"
+            (mapReady)="onMapReady($event)">
+        </Mapbox>
+    </ContentView>
+</AbsoluteLayout>

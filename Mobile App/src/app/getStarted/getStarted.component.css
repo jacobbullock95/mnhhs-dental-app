@@ -1,0 +1,102 @@
+.page {
+  align-items: center;
+  flex-direction: column;
+  font-family: "Open Sans", "OpenSans-Regular";
+  background-color: #0079be;
+  /*background: linear-gradient(135deg, #008ef4 0%,#5fb6f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: #ffffff;
+}
+
+.logo-container{
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 100%;
+}
+
+.getStartedIcon{
+  width: 300;
+  margin-top: 70;
+}
+
+.getStartedMain{
+  margin-top: 20;
+  font-size: 35;
+  font-family: "Open Sans", "OpenSans-Light";
+  font-weight: 300;
+}
+
+.getStartedSub{
+  margin-bottom: 20;
+  margin-top: 10;
+  font-size: 18;
+  font-family: "Open Sans", "OpenSans-Light";
+  font-weight: 300;
+}
+
+.form {
+  margin-left: 30;
+  margin-right: 30;
+  flex-grow: 2;
+  vertical-align: middle;
+}
+
+.logo {
+  margin-bottom: 12;
+  height: 90;
+  font-weight: bold;
+}
+.header {
+  /*horizontal-align: center;*/
+  font-size: 25;
+  font-weight: 500;
+  margin-top: 10%;
+  margin-left: 10%;
+  color: #000000;
+}
+
+.input-field {
+  margin-bottom: 25;
+}
+.input {
+  font-size: 18;
+}
+.input:disabled {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.btn-primary {
+  margin: 30 5 15 5;
+  margin-bottom: 10;
+}
+
+.text-label {
+  horizontal-align: center;
+  margin-bottom: 10;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.btn100{
+  width: 100%;
+}
+
+.btn50{
+  width: 50%;
+}
+
+.btn{
+  height: 60;
+  border-width: 1;
+  border-color: #ffffff;
+  border-radius: 5;
+  text-transform: none;
+  font-size: 18;
+  color: #ffffff;
+}
+
+.getStartedNavigationBtns{
+  margin-bottom: 40;
+}

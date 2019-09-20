@@ -1,0 +1,23 @@
+.headerShapeContainer{
+    top: 0;
+    left: 0;
+
+}
+
+.headerShape{
+    background-color: #0079be;
+    clip-path: ellipse(52% 48% at 35% 52%);
+    width: 570;
+    height: 250;
+    transform: translate(-30%, -160%);
+
+}
+
+.header{
+    height: 125;
+    padding-top: 25;
+    padding-left: 30;
+
+    color: #ffffff;
+    font-weight: 500;
+}

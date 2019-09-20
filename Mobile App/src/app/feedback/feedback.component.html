@@ -1,0 +1,44 @@
+
+<StackLayout height="100%">
+        <ns-action-bar
+        title="Feedback"
+        [showBackButton]="true"
+      ></ns-action-bar>
+
+      
+      <Label class="h3" text="Rate Your Experience With The App" textAlign="left"></Label>
+
+      <StackLayout class="form" [formGroup]="form">
+            <StackLayout class="input-field">
+                    <Label 
+                    class="label" 
+                    text="Rating (1-10)" 
+                    ></Label>
+                    <TextField
+                    placeholder="Rate App From 1 - 10"
+                    keyboardType="number"
+                    class="input" 
+                    returnKeytype="next"
+                    autocorrect="false"
+                    formControlName="rating"
+                    ></TextField>
+            </StackLayout>
+            <StackLayout class="input-field">
+                    <Label 
+                    class="label" 
+                    text="Feedback" 
+                    ></Label>
+                    <TextField
+                    placeholder="Tell us what you think.."
+                    class="input" 
+                    returnKeytype="next"
+                    autocorrect="false"
+                    formControlName="message"
+                    ></TextField>
+    
+            </StackLayout>
+            
+            <Button class="btn" text="Submit Feedback" (tap)="submitFeedback()" nsRouterLink="/home"></Button>
+      </StackLayout>
+  
+</StackLayout>

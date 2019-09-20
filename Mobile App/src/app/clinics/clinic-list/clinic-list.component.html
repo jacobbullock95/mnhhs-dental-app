@@ -1,0 +1,17 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+  <ns-action-bar
+    title="Our Clinics"
+    [showBackButton]="false"
+  ></ns-action-bar>
+
+  <StackLayout height="100%">
+      <Label class="h2" text="Find a clinic from the list below." textWrap="true" marginBottom="10"></Label>
+      <ListView [items]="dentalOffices" (itemTap)="navigateToSummary($event)" class="list-group" height="100%">
+        <ng-template let-office="item" let-i="index" let-odd="odd" let-even="even">
+            <StackLayout orientation="horizontal" class="list-group-item">
+                <Label [text]="office.name" textWrap="true" width="100%"></Label>
+            </StackLayout>
+        </ng-template>
+      </ListView>
+  </StackLayout>
+</FlexboxLayout>

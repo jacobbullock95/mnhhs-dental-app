@@ -1,0 +1,13 @@
+.img-thumbnail {
+    margin-left: 10%;
+    width: 80%;
+    height: 85%;
+}
+
+.card-body {
+    padding-left: 0% 5%;
+}
+
+.card {
+    overflow:hidden;
+}

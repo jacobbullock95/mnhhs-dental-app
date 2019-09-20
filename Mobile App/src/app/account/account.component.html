@@ -1,0 +1,136 @@
+<ns-action-bar
+    title="My Account"
+    [showBackButton]="false"
+  ></ns-action-bar>
+                
+
+  <FlexboxLayout justifyContent="center" alignItems="center" *ngIf="isLoading">
+        <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+      </FlexboxLayout>
+
+
+<StackLayout class="form" [formGroup]="form" *ngIf="!isLoading">
+
+
+
+        <StackLayout class="input-field">
+                <Label 
+                class="label" 
+                text="First Name" 
+                ></Label>
+                <TextField
+                [text]="currentAccount.firstName" 
+                class="input" 
+                returnKeytype="next"
+                autocorrect="false"
+                formControlName="firstName"
+                ></TextField>
+
+        </StackLayout>
+
+        <StackLayout class="input-field">
+                <Label 
+                class="label" 
+                text="Last Name" 
+                ></Label>
+                <TextField
+                [text]="currentAccount.lastName" 
+                class="input" 
+                returnKeytype="next"
+                autocorrect="false"
+                formControlName="lastName"
+                ></TextField>
+
+        </StackLayout>
+
+        <StackLayout class="input-field">
+                <Label 
+                class="label" 
+                text="Phone Number"
+                keyboardType="phone"
+                ></Label>
+                <TextField
+                [text]="currentAccount.phone"
+                class="input" 
+                returnKeytype="next"
+                autocorrect="false"
+                formControlName="phone"
+                ></TextField>
+
+        </StackLayout>
+
+        <StackLayout class="input-field">
+                <Label 
+                class="label" 
+                text="Medicare Card Number"
+                keyboardType="number"
+                ></Label>
+                <TextField
+                [text]="currentAccount.medicareNumber"
+                class="input" 
+                returnKeytype="next"
+                autocorrect="false"
+                formControlName="medicareNumber"
+                ></TextField>
+
+        </StackLayout>
+
+        <StackLayout class="input-field">
+                <Label 
+                class="label" 
+                text="Medicare Line Number"
+                keyboardType="number"
+                ></Label>
+                <TextField
+                [text]="currentAccount.medicareCode"
+                class="input" 
+                returnKeytype="next"
+                autocorrect="false"
+                formControlName="medicareCode"
+                ></TextField>
+
+        </StackLayout>
+
+        <StackLayout class="input-field">
+                <Label 
+                class="label" 
+                text="Medicare Expiry"
+                keyboardType="datetime" 
+                ></Label>
+                <TextField
+                [text]="currentAccount.medicareExpiry"
+                class="input" 
+                returnKeytype="next"
+                autocorrect="false"
+                formControlName="medicareExpiry"
+                ></TextField>
+
+        </StackLayout>
+
+        <Button
+        text="Update"
+        class="btn"
+        (tap)="onSubmit()"
+  ></Button>
+  <Button
+        text="Back"
+        class="btn btnOutline"
+        [nsRouterLink]="['/account-nav']"
+  ></Button>
+
+
+
+  </StackLayout>
+
+
+        
+                
+
+
+
+
+
+  
+
+
+

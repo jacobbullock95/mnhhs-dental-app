@@ -1,0 +1,19 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+  <ns-action-bar
+    title="Clinic Summary"
+    [showBackButton]="true"
+  ></ns-action-bar>
+
+  <FlexboxLayout height="100%">
+    <Label class="heading strong" text="{{name}}"></Label>
+
+    <StackLayout class="imageContainer"><StackLayout class="clinicImage" style="background-image: url('{{imgURL}}')"></StackLayout></StackLayout>
+    
+    <Label class="address" text="{{address}}" width="80%" textWrap="true"></Label>
+    <Label class="phone" text="{{phone}}"></Label>
+
+    <Button class="btn btn-primary btn-active" id="button" text="Show on Google Maps" (tap)="openMap()"></Button>
+    <Button class="btn btn-primary btn-active" id="button" text="Call Clinic" (tap)="openPhone()"></Button>
+
+  </FlexboxLayout>
+</FlexboxLayout>

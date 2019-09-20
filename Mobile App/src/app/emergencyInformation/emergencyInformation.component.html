@@ -1,0 +1,39 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+        title="Emergency Information"
+        [showBackButton]="true"
+    ></ns-action-bar>
+
+    <StackLayout height="100%" width="80%">
+        <!--<StackLayout class="mb-20">
+            <Label class="strong" text="Metro North Health offers urgent dental care for eligible adults and children at our dental clinics throughout the region." textWrap="true"></Label>
+        </StackLayout>-->
+
+        <StackLayout class="mb-20">
+        <Label class="header strong" text="Emergencies that require urgent treatment include:" textWrap="true"></Label>
+        <Label text="• bleeding in the mouth that will not stop" textWrap="true"></Label>
+        <Label text="• swelling of the face from a tooth infection" textWrap="true"></Label>
+        <Label text="• recent injury to the teeth." textWrap="true"></Label>
+        </StackLayout>
+
+        <StackLayout class="mb-20">
+            <Label class="header strong" text="Making an appointment" textWrap="true"></Label>
+            <Label text="If you need urgent dental treatment, simply call our Oral Health Hub:" textWrap="true"></Label>
+            <Label text="1300 300 850" textWrap="true"></Label>
+            <Button class="btn" id="button" text="Call the Oral Health Hub Now" (tap)="call('1300300850')"></Button>
+        </StackLayout>
+
+        <StackLayout>
+            <StackLayout class="mb-10">
+                <Label class="strong header" text="Need help now?" textWrap="true"></Label>
+                <Label class="strong" text="In an emergency call 000" textWrap="true"></Label>
+                <Button class="btn" id="button" text="Call Emergency Department Now" (tap)="call('000')"></Button>
+            </StackLayout>
+            <StackLayout class="mb-10">
+                <Label class="strong" text="For non-urgent health advice call 13 HEALTH" textWrap="true"></Label>
+                <Button class="btn" id="button" text="Call Non-Urgent Health Advice Now" (tap)="call('13432584')"></Button>
+            </StackLayout>
+        </StackLayout>
+        
+    </StackLayout>
+</FlexboxLayout>

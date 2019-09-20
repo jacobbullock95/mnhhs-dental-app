@@ -1,0 +1,87 @@
+
+<!-- Homepage for logged out user/guest -->
+
+<div *ngIf="!loggedIn() && !guestLoggedIn()" class="container" id="homeCont">
+  <div *ngIf="!registerMode">
+      <div *ngIf="!loginMode" style="text-align: center">
+        <img src="../../assets/images/logo2.png"/>
+        <h3>Metropolitan North Hospital & Health Services</h3>
+          <h2>Dental Services,<br> Online.</h2>
+          <p class="lead">Find information, sign forms, get in touch.<br>All from one app!</p>
+          <div class="text-center">
+              <button class="btn btn-success btn-lg mt-2" (click)="loginToggle()">Login</button>
+              <br>
+            <button class="btn btn-warning btn-lg mt-2" (click)="registerToggle()">Register</button>
+              <br>
+            <button class="btn btn-primary btn-lg mt-2" (click)="guestToggle()">Continue as Guest</button>
+            
+          </div>
+        </div>
+
+  </div>
+  
+
+  
+
+  </div>
+
+
+<!--END-->
+
+<div *ngIf="registerMode && !loggedIn()" class="container">
+    <div class="row justify-content-center">
+      <div >
+        <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="loginMode && !loggedIn()" class="container">
+      <div class="row justify-content-center">
+        <div>
+          <app-login (cancelLogin)="cancelLoginMode($event)"></app-login>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Homepage for logged in user/guest -->
+
+    <div *ngIf="loggedIn() || guestLoggedIn() && !registerMode && !loginMode" class="container mt-5">
+      <div class="row justify-content-center"> 
+        <div class="text-center pills">
+
+          
+
+            <a [routerLink]="['/information']">
+              <button class="btn btn-primary btn-lg mt-2 buttonBig">Information</button>
+              <br>
+            
+            </a>
+
+            <a [routerLink]="['/clinics']">
+              <button class="btn btn-primary btn-lg mt-2 buttonBig">Clinics</button>
+              <br>
+            
+            </a>
+
+            <a [routerLink]="['/myaccount']">
+              <button *ngIf="loggedIn()" class="btn btn-primary btn-lg mt-2 buttonBig" >My Account</button>  
+            </a>
+
+              <div *ngIf="guestLoggedIn()">
+                  <label class="mt-2" for="buttonX">You must Login to view your account</label>
+                  <br>
+                  <button name="buttonX" class="btn btn-success btn-xs mr-2" (click)="loginToggle()">Login</button>
+                  <button name="buttonX" class="btn btn-warning btn-xs" (click)="registerToggle()">Register</button>
+              </div>             
+          
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <!--END-->
+  

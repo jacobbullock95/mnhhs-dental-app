@@ -1,0 +1,40 @@
+/* Add mobile styles for the component here.  */
+.nav-item {
+    width: 90%;
+    height: 100;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.nav-text {
+    font-size: 26;
+    color: white;
+
+}
+
+.nav-icon {
+    font-size: 40;
+    color: white;
+    margin-right: 5%;
+
+}
+
+FlexboxLayout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    background-color: #0079be;
+}
+
+.btn2{
+    background-color: #0B56D6;
+}
+
+.btn3{
+    background-color: #0A1FCC;
+}

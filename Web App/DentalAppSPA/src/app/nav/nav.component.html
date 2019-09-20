@@ -1,0 +1,24 @@
+<nav  class="navbar navbar-expand-md navbar-dark bg-primary mb-2">
+  <div class="container">
+    
+      <div *ngIf="loggedIn() || guestLoggedIn()" class="dropdown" dropdown>
+        <a class="dropdown-toggle text-light" dropdownToggle>
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="dropdown-menu mt-4" *dropdownMenu>
+            <!-- <a *ngIf="loggedIn() || guestLoggedIn()" class="dropdown-item mt-1" [routerLink]="['/account/edit']"><i class="fa fa-user"></i>Edit Profile</a>  -->
+            <a *ngIf="loggedIn() || guestLoggedIn()" class="dropdown-item mt-1" [routerLink]="['/home']" routerLinkActive="active" ><i class="fa fa-home mr-1"></i>Home</a>
+            <a *ngIf="loggedIn() || guestLoggedIn()" class="dropdown-item mt-1" [routerLink]="['/information']" routerLinkActive="active" ><i class="fa fa-info-circle mr-1"></i>Information</a>          
+            <a *ngIf="loggedIn() || guestLoggedIn()" class="dropdown-item mt-1" [routerLink]="['/clinics']" routerLinkActive="active" ><i class="fa fa-heartbeat mr-1"></i>Clinics</a>
+            <a *ngIf="loggedIn()" class="dropdown-item mt-1" [routerLink]="['/myaccount']" routerLinkActive="active"><i class="fa fa-user mr-1"></i>My Account</a>
+          <div *ngIf="loggedIn()" class="dropdown-divider"></div>
+            <a *ngIf="loggedIn()" class="dropdown-item mt-1" (click)="logout()"><i class="fa fa-sign-out mr-1"></i>Logout</a>
+        </div>
+      </div>
+
+      <a class="navbar-brand" [routerLink]="['/home']"><img class="w-50" style="margin-left: 50%;" src="../../assets/images/logo.png"/></a>
+
+  </div>
+  
+  
+</nav>

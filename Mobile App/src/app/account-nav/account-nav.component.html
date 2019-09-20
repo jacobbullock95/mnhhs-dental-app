@@ -1,0 +1,22 @@
+<ns-action-bar
+    title="My Account"
+    [showBackButton]="false"
+  ></ns-action-bar>
+  <FlexboxLayout>
+      <FlexboxLayout class="nav-item btn-rounded-sm btn-primary btn"  backgroundColor="#0079BF" [nsRouterLink]="['/account']">
+        <Label text="&#xf2bd;" class="fa icon nav-icon"></Label>
+        <Label class="nav-text" text="My Details"></Label>
+      </FlexboxLayout>
+      
+      <FlexboxLayout class="nav-item btn btn-rounded-sm btn-secondary btn2" backgroundColor="#005180" [nsRouterLink]="['/records']">
+        <Label text="&#xf21e;" class="fa icon nav-icon"></Label>
+        <Label class="nav-text" text="My Records"></Label>
+
+      </FlexboxLayout>
+
+      <FlexboxLayout class="nav-item btn btn-rounded-sm btn-contrast btn3" backgroundColor="#002840" [nsRouterLink]="['/family']">
+        <Label text="&#xf0c0;" class="fa icon nav-icon"></Label>
+        <Label class="nav-text" text="My Family"></Label>
+
+      </FlexboxLayout>
+  </FlexboxLayout>

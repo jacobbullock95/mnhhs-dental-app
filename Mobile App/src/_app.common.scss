@@ -1,0 +1,127 @@
+@import '~nativescript-theme-core/scss/light';
+
+@import './theme/colors';
+
+$btn-color: $primary;
+
+@import '~nativescript-theme-core/scss/index';
+
+ActionBar {
+    background: $primary;
+    color: white;
+}
+
+.drawer-container {
+  background: linear-gradient(140deg, $primary,$secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .btn {
+    width: 80%;
+    font-size: 24;
+    height: 40;
+  }
+}
+
+.btn-flat {
+  background: transparent;
+  border-color: $fail;
+  border-width: 1;
+  color: $fail;
+}
+
+.btn-reset{
+  background: transparent;
+  border-color: transparent;
+  border-width: 1;
+  color: $primary;
+}
+
+.form {
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  .input-field {
+    width: 80%;
+  
+    .input {
+        border-bottom-width: 2;
+        border-bottom-color: $primary;
+        width: 100%;
+        color: black;
+    }
+  
+    .label.invalid {
+      color: red;
+    }
+    
+    .label {
+        color: $primary;
+        font-weight: bold;
+    }
+
+    .ng-invalid.ng-touched {
+      border-bottom-color: red;
+      color: red;
+    }
+    
+    .ng-valid.ng-touched {
+      border-bottom-color: $primary;
+    }
+  }
+}
+
+
+
+.h1, .h2, .h3 {
+  font-weight: bold;
+  color: $primary;
+  text-align: center;
+  margin: 5 0;
+}
+
+.h1-dev {
+  font-weight: bold;
+  color: $fail;
+  text-align: center;
+  margin: 5 0;
+}
+
+.fa {
+  font-family: 'FontAwesome', 'Font-Awesome';
+}
+
+.btn-contrast {
+  background: $contrast;
+  color: white;
+}
+
+.btn-red {
+  background: rgb(172, 0, 0);
+  color: white;
+}
+
+.btn-success {
+  background: #008321;
+  color: white;
+}
+
+.btn-secondary {
+  background: $secondary;
+  color: white;
+}
+
+.btn-primary-drawer {
+  background: $primary;
+  color: white;
+}
+
+.btn-drawer {
+  border-width: 2;
+  border-color: white;
+  padding: 2;
+}
+
+

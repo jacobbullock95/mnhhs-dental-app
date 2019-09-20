@@ -1,0 +1,25 @@
+.dropdown-toggle, .dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-toggle{
+    font-size: 150%;
+    text-align: right;
+}
+
+.dropdown-item {
+    font-size: 120%;
+    padding-left: 1%;
+}
+
+.dropdown-item:hover {
+    font-size: 120%;
+    padding-left: 1%;
+}
+
+i {
+    text-align: center;
+    font-size: 125%;
+    
+}
+

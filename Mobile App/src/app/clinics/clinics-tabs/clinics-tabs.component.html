@@ -1,0 +1,10 @@
+<TabView
+  androidTabsPosition="bottom"
+>
+  <StackLayout *tabItem="{ title: 'Search Clinics' }">
+    <page-router-outlet name="clinicSearch"> </page-router-outlet>
+  </StackLayout>
+  <StackLayout *tabItem="{ title: 'See All Clinics' }">
+    <page-router-outlet name="clinicList"> </page-router-outlet>
+  </StackLayout>
+</TabView>

@@ -1,0 +1,28 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+        title="Learn"
+        [showBackButton]="false"
+    ></ns-action-bar>
+
+    
+    <StackLayout height="100%" width="90%">
+          <StackLayout class="informationShortcut width100" (tap)="navigateToSummaryPage('healthyTeeth')">
+            <StackLayout class="healthyTeeth infoBkgImg" width="100%" height="80%"></StackLayout>
+            <Label text="Healthy Teeth"></Label>
+          </StackLayout>
+          <StackLayout class="informationShortcut width100" (tap)="navigateToSummaryPage('emergencyInformation')">
+              <StackLayout class="emergencyInformation infoBkgImg" width="100%" height="80%"></StackLayout>
+              <Label text="Emergency Information"></Label>
+          </StackLayout>
+      <StackLayout width="100%" orientation="horizontal">
+          <StackLayout class="informationShortcut mr-5p" (tap)="navigateToSummaryPage('medicare')">
+              <StackLayout class="medicare infoBkgImg" width="100%" height="80%"></StackLayout>
+              <Label text="Medicare Benefits"></Label>
+          </StackLayout>
+          <StackLayout class="informationShortcut" (tap)="navigateToSummaryPage('moreInfo')">
+              <StackLayout class="moreInfo infoBkgImg" width="100%" height="80%"></StackLayout>
+              <Label text="More Information"></Label>
+          </StackLayout>
+      </StackLayout>
+    </StackLayout>
+</FlexboxLayout>

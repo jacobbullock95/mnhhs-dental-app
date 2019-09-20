@@ -1,0 +1,21 @@
+<FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+        title="Medicare"
+        [showBackButton]="false"
+    ></ns-action-bar>
+
+    
+    <StackLayout height="100%" width="80%">
+        <Label class="strong heading" text="Free public dental clinics" textWrap="true"></Label>
+        <Label class="ptext" text="• Who is eligible for free dental care?" textWrap="true"></Label>
+        <Label class="ptext" text="• Adults who have a current Pension, Healthcare or Seniors card" textWrap="true"></Label>
+        <Label class="ptext" text="• Children" textWrap="true"></Label>
+        <StackLayout class="tabbed">
+            <Label class="ptext" text="- all children between the ages of 4 through to year 10" textWrap="true"></Label>
+            <Label class="ptext" text="- students in year 11 and 12 who have a current Centrelink, Healthcare or Pension card." textWrap="true"></Label>
+            <Label class="ptext" text="- 0-3 year olds whose parents have a current Centrelink, Healthcare or Pension card" textWrap="true"></Label>
+            <Label class="ptext" text="- 2-17 year olds who are eligible for the Child Dental Benefits Schedule." textWrap="true"></Label>
+        </StackLayout>
+        <Button class="btn mt20" id="button" text="View more information on Medicare's website" (tap)="navigateToMedicare()"></Button>
+    </StackLayout>
+</FlexboxLayout>

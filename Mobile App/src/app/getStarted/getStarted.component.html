@@ -1,0 +1,36 @@
+<FlexboxLayout class="page">
+
+    <StackLayout  class="" flexGrow="1">
+            <Image src="~/app/assets/welcomeIcons/welcomeIcon1.png" stretch="aspectFit" class="getStartedIcon"></Image>
+
+        <Label class="text-label getStartedMain">
+            <FormattedString>
+                <Span text="Welcome!"></Span>
+            </FormattedString>
+        </Label>
+        <!--<Label class="text-label getStartedSub">
+            <FormattedString>
+                <Span text="Find out more about the dental process"></Span>
+            </FormattedString>
+        </Label>-->
+
+
+    </StackLayout>
+
+    <StackLayout class="getStartedNavigationBtns form">
+        <Button text="Get Started" (tap)="getStarted()" class="btn m-t-20 btn100"></Button>
+        <!--<Button text="Already have an account? Login" (tap)="login()" class="btn m-t-20 btn100"></Button>-->
+        <Label class="text-label" (tap)="login()">
+            <FormattedString>
+                <Span text="Already have an account?   "></Span>
+                <Span class="bold" text="Login"></Span>
+            </FormattedString>
+        </Label>
+        <Label class="text-label" (tap)="continueAsGuest()">
+            <FormattedString>
+                <Span text="Continue as a Guest"></Span>
+            </FormattedString>
+        </Label>
+    </StackLayout>
+
+</FlexboxLayout>

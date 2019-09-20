@@ -1,0 +1,73 @@
+<RadSideDrawer>
+  <StackLayout tkDrawerContent class="drawer-container">
+      <StackLayout class="sidebarTop">
+          <StackLayout class="sidebarLogo">
+            </StackLayout>
+          
+        <StackLayout class="hr-light"></StackLayout>
+      </StackLayout>
+
+      
+
+      
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/home" (tap)="onDrawerNav()">
+        <Label text="&#xf015;" class="fa icon"></Label>
+        <Label text="Home" class=""></Label>
+      </FlexboxLayout>
+
+      <!--<FlexboxLayout class="sidebarItem" nsRouterLink="/account-nav" (tap)="onDrawerNav()">
+        <Label text="&#xf007;" class="fa icon"></Label>
+        <Label text="My Account" class=""></Label>
+      </FlexboxLayout>-->
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/clinics" (tap)="onDrawerNav()">
+        <Label text="&#xf124;" class="fa icon"></Label>
+        <Label text="Clinics" class=""></Label>
+      </FlexboxLayout>
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/challenges" (tap)="onDrawerNav()">
+        <Label text="&#xf118;" class="fa icon"></Label>
+        <Label text="Brushing Challenge" class=""></Label>
+      </FlexboxLayout>
+      
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/info" (tap)="onDrawerNav()">
+        <Label text="&#xf129;" class="fa icon"></Label>
+        <Label text="Information" class=""></Label>
+      </FlexboxLayout>
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/forms" (tap)="onDrawerNav()" *ngIf="loggedIn">
+        <Label text="&#xf039;" class="fa icon"></Label>
+        <Label text="Submit Consent Form" class=""></Label>
+      </FlexboxLayout>
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/emergencyInformation" (tap)="onDrawerNav()">
+        <Label text="&#xf071;" class="fa icon"></Label>
+        <Label text="Emergency Contacts" class=""></Label>
+      </FlexboxLayout>
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/contact" (tap)="onDrawerNav()"  *ngIf="loggedIn">
+        <Label text="&#xf075;" class="fa icon"></Label>
+        <Label text="Request Call Back" class=""></Label>
+      </FlexboxLayout>
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/feedback" (tap)="onDrawerNav()">
+        <Label text="&#xf123;" class="fa icon"></Label>
+        <Label text="App Feedback" class=""></Label>
+      </FlexboxLayout>
+
+      <FlexboxLayout class="sidebarItem" nsRouterLink="/settings" (tap)="onDrawerNav()">
+        <Label text="&#xf013;" class="fa icon"></Label>
+        <Label text="Settings" class=""></Label>
+      </FlexboxLayout>
+
+      <!--<FlexboxLayout class="sidebarItem" nsRouterLink="/" (tap)="onLogout()" [clearHistory]="true">
+        <Label text="&#xf08b;" class="fa icon"></Label>
+        <Label text="Logout" class=""></Label>
+      </FlexboxLayout>-->
+
+  </StackLayout>
+  <StackLayout tkMainContent>
+    <page-router-outlet></page-router-outlet>
+  </StackLayout>
+</RadSideDrawer>

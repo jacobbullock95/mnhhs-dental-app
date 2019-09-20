@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  <div class="row">
+    <h1>
+      {{user.username}}
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="https://picsum.photos/400/?image=1005" alt="alt">
+        <div class="card-body">
+          <div>
+              <strong>ID</strong>
+              <p>{{user.id}}</p>
+          </div>
+
+          
+          <div>
+              <strong>Name</strong>
+              <p>{{user.username}}</p>
+          </div>
+            
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+          <tab heading="About {{user?.username}}">
+            <h4>User Id</h4>
+            <p>{{user.id}}</p>
+            <h4>User username</h4>
+            <p>{{user.username}}</p>
+          </tab>
+
+          <tab heading="Sec 2">
+              <h4>Sec 2</h4>
+              <p>222222222</p>
+              
+            </tab>
+
+            <tab heading="Sec 3">
+                <h4>Sec 3</h4>
+                <p>33333333</p>
+                
+              </tab>
+
+        </tabset>
+      </div>
+
+    </div>
+  </div>
+</div>

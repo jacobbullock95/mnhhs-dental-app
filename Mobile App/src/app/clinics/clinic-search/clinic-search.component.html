@@ -1,0 +1,59 @@
+
+  <FlexboxLayout height="100%" flexDirection="column" justifyContent="flex-start" alignItems="center" alignContent="flex-start">
+    <ns-action-bar
+    title="Clinics"
+    [showBackButton]="false"
+    ></ns-action-bar>
+    <FlexboxLayout height="100%">
+    <StackLayout>
+        <Label class="h2" text="Search for a clinic" *ngIf="showSearchInputs"></Label>
+        <SearchBar 
+        class="clinic-search"
+        hint="Search by Suburb"  
+        #searchEl
+        (loaded)="onSearchLoaded()"
+        (submit)="searchClinics('name', $event, showMap)"
+        (onTap)="showSearchOptions()"
+        ></SearchBar>
+        <Button text="Search by Current Location" (tap)="searchClinics('currentLocation')" class="search-button" *ngIf="showSearchInputs"></Button>
+        <Button text="View Clinics on Map" (tap)="searchClinics('viewMap')" class="search-button" *ngIf="showSearchInputs"></Button>
+    </StackLayout>
+    <ListView [items]="dentalOffices" (itemTap)="onItemTap($event)" class="list-group" height="150" *ngIf="showClinicList">
+        <ng-template let-office="item" let-i="index" let-odd="odd" let-even="even">
+            <StackLayout orientation="horizontal" class="list-group-item">
+                <Label [text]="office.name" textWrap="true" width="70%"></Label>
+                <Label [text]="office.distance" textWrap="false"></Label>
+                <Label text="km" textWrap="false"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+    <!--<ContentView width="100%" class="mapContainer" *ngIf="showMap">
+        <Mapbox
+            #map
+            accessToken="pk.eyJ1IjoibW1hZ2luMSIsImEiOiJjanUxb2QzMjUwM3FnM3lydmM5MWdlbTQ5In0.JtTt3RGfngLVeNAcYKoRmA"
+            mapStyle="day"
+            latitude="-28.890108"
+            longitude="136.324818"
+            hideCompass="true"
+            zoomLevel="8"
+            showUserLocation="true"
+            disableZoom="false"
+            disableRotation="false"
+            disableScroll ="false"
+            disableTilt="false"
+            (mapReady)="onMapReady($event)">
+        </Mapbox>
+    </ContentView>-->
+  </FlexboxLayout>
+  </FlexboxLayout>
+
+  <DockLayout stretchLastChild="false">
+    <Button dock="bottom" text="New Search" class="resetButton" (tap)="resetSearch()" *ngIf="showResetButton" clearHistory="true"></Button>
+    
+</DockLayout>
+
+<AbsoluteLayout height="100%" width="100%" class="greyOverlay" *ngIf="loadingDisplay">
+    <FlexboxLayout width="100%" height="100%">
+    <ActivityIndicator row="1" #activityIndicator busy="true" (busyChange)="onBusyChanged($event)" width="100" height="100" class="activity-indicator"></ActivityIndicator>
+    </FlexboxLayout>
+</AbsoluteLayout>

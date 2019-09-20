@@ -1,0 +1,12 @@
+@import "app.common";
+@import '~nativescript-theme-core/scss/platforms/index.ios';
+
+// .btn {
+//     background: transparent;
+//     color: #7c015d;
+//   }
+
+ActionBar {
+    background: darken($primary, 2);
+    color: white;
+}
